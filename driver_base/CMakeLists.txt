@@ -25,3 +25,8 @@ catkin_package(
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h")
+
+set(cpackconfig "/opt/lrs_wara/src/lrs_wara/cpackconfig.cmake")
+if (EXISTS ${cpackconfig})
+  include(${cpackconfig})
+endif()

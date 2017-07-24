@@ -22,3 +22,8 @@ if(CATKIN_ENABLE_TESTING)
 	catkin_add_gtest(test_trigger_matcher test/test_trigger_matcher.cpp)
 	target_link_libraries(test_trigger_matcher ${catkin_LIBRARIES})
 endif()
+
+set(cpackconfig "/opt/lrs_wara/src/lrs_wara/cpackconfig.cmake")
+if (EXISTS ${cpackconfig})
+  include(${cpackconfig})
+endif()

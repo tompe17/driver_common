@@ -5,5 +5,6 @@ catkin_metapackage()
 
 set(cpackconfig "/opt/lrs_wara/src/lrs_wara/cpackconfig.cmake")
 if (EXISTS ${cpackconfig})
+  set(CPACK_PACKAGE_NAME "driver-common")      
   include(${cpackconfig})
 endif()
